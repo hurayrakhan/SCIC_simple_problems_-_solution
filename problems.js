@@ -123,3 +123,98 @@ function sumOfArray(array){
 // console.log(sumOfArray([10, 20, 30, 40, 50]));
 
 
+// Problem 7: Find Even Numbers in an Array
+// Write a function that returns all even numbers from a given array.
+// Example:
+// Input: [1, 2, 3, 4, 5, 6]
+// Output: [2, 4, 6]
+
+function findEvenNumbers(array){
+    const evenNumbers = [];
+    for(let i = 0; i < array.length; i++){
+        if(array[i] % 2 === 0){
+            evenNumbers.push(array[i]);
+        }
+    }
+    return evenNumbers;
+}
+
+// console.log(findEvenNumbers([3, 4, 5, 8, 12]));
+// console.log(findEvenNumbers([10, 21, 25, 40, 55]));
+
+
+
+// Problem 8: Capitalize First Letter of Each Word
+// Write a function that capitalizes the first letter of each word in a string.
+// Example:
+// Input: "hello world"
+// Output: "Hello World"
+
+
+function capitalizer(prop){
+    const words = prop.split(' ');
+    let capitalizeWords = '';
+    for(let i = 0; i < words.length; i++){
+        const word = words[i];
+        capitalizeWords += word.charAt(0).toUpperCase() + word.slice(1) + ' ';
+    }
+    return capitalizeWords;
+}
+
+// console.log(capitalizer('hello world'))
+// console.log(capitalizer('this is a fun fact'));
+
+
+
+// Problem 9: Find the Factorial of a Number
+// Write a function that calculates the factorial of a number using a loop.
+// Example:
+// Input: 5
+// Output: 120
+
+
+function factorial(num){
+    if(num < 0){
+        return
+    }
+    let fact = 1;
+    for(let i = 1; i <= num; i++){
+        fact *= i;
+
+    }
+    return fact;
+}
+
+// console.log(factorial(5));
+
+
+// Problem 10: PingPong Challenge
+// Write a function that prints numbers from 1 to 20.
+// Example:
+// For multiples of 3, print "Ping"
+// For multiples of 5, print "Pong"
+// For multiples of both 3 and 5, print "PingPong"
+// If the number is not a multiple of 3 or 5, print the number itself
+// Example Output:
+
+// 1, 2, Ping, 4, Pong, Ping, 7, 8, Ping, Pong, 11, Ping, 13, 14, PingPong, 16 …..
+
+
+function pingPong(){
+    for(let i = 1; i <= 20; i++){
+        if(i % 3 === 0 && i % 5 === 0){
+            console.log('pingpong');
+        }
+        else if(i % 3 === 0){
+            console.log("ping");
+        }
+        else if(i % 5 === 0){
+            console.log('pong');
+        }
+        else {
+            console.log(i);
+        }
+    }
+}
+
+pingPong();
